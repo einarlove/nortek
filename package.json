@@ -1,0 +1,28 @@
+{
+  "name": "nortek",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --out-dir public --copy-files --presets airbnb",
+    "start": "npm run build -- --watch & live-server public --port 2052"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-airbnb": "^2.2.3",
+    "http-server": "^0.10.0",
+    "live-server": "^1.2.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "eslint": "3.16.1",
+    "eslint-config-react-app": "^0.6.2",
+    "eslint-plugin-flowtype": "2.21.0",
+    "eslint-plugin-import": "2.0.1",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.4.1"
+  }
+}
