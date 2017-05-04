@@ -34,8 +34,6 @@ const draw = () => {
   ctx.fillRect(0, 0, canvas.width, canvas.height)
   ctx.lineWidth = lineWidth
 
-  ctx.fillRect(0, 0, 100, )
-
   for (let x = 0; x < Math.ceil(canvas.width / areal); x++) {
     for (let y = 0; y < Math.ceil(canvas.height / areal); y++) {
       const centerX = (x * areal) + (areal / 2)
@@ -64,9 +62,20 @@ const draw = () => {
       ctx.lineTo(areal / 2, areal - padding)
       ctx.stroke()
 
+      // ctx.fillStyle = '#eee'
+      // ctx.fillRect(areal / 2, areal / 2, (1 - distanceFromMouse / (areal * 5)) * 10, (1 - distanceFromMouse / (areal * 5)) * 10)
+
       ctx.restore()
     }
   }
+
+
+  ctx.fillStyle = '#eee'
+  ctx.fillRect(0, 0, 300, 160)
+  ctx.font = "30px Helvetica"
+  ctx.fillStyle = '#111'
+  ctx.fillText('velocity: ' + mouse.velocity.toFixed(2), 15, 40)
+  ctx.fillText('angle: ' + mouse.angle.toFixed(2), 15, 40 * 2)
 
   requestAnimationFrame(draw)
 }
