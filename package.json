@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "BABEL_ENV=development babel src --out-dir public --copy-files",
-    "start": "npm run build -- --watch & live-server public --port 2052"
+    "build": "BABEL_ENV=development babel src --out-dir build --copy-files",
+    "start": "npm run build -- --watch & live-server build --port 2052"
   },
   "eslintConfig": {
     "extends": "react-app"
