@@ -1,7 +1,7 @@
 const canvas = document.querySelector('#canvas')
 const ctx = canvas.getContext('2d')
 const pixelRatio = window.devicePixelRatio || 1
-let mouse = { x: 0, y: 0, updated: Date.now() }
+let mouse = { x: 0, y: 0, updated: Date.now(), angle: 0, velocity: 0 }
 
 const distanceBetween = (ax, bx, ay, by) => (
   Math.sqrt(Math.pow(ax - bx, 2) + Math.pow(ay - by, 2))

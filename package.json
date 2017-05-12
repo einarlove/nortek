@@ -11,7 +11,9 @@
     "extends": "react-app"
   },
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
